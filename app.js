@@ -19,6 +19,8 @@ app
   .route("/investments/:id")
   .delete(investmentController.delete);
 
-app.listen(3010, () => {
-    console.log(`Server running at http://localhost:3010`);
+const porta = process.env.PORT || 8080;
+
+app.listen(porta, () => {
+    console.log(`Server running at http://localhost:${porta}`);
 });
