@@ -1,6 +1,7 @@
 const Express = require("express");
 const BodyParser = require("body-parser");
 const investmentController = require("./controllers/InvestmentController");
+const cors = require('cors');
 
 require("./config/db");
 
@@ -8,6 +9,8 @@ const app = Express();
 
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
+app.use(cors());
+app.options('*', cors());
 
 //API ENDPOINTS
 app
