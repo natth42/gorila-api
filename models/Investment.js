@@ -7,7 +7,7 @@ const InvestmentSchema = new Schema({
     required: true
   },
   value: {
-    type: String,
+    type: mongoose.Decimal128,
     required: true
   },
   date: {
